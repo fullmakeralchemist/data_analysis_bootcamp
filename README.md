@@ -21,7 +21,7 @@
 <p align="center">
 
   <a href="https://github.com/fullmakeralchemist/">
-    <img src="media/logo.png" alt="Logo" width="720">
+    <img src="assests/data_analysis.png" alt="Logo" width="720">
   </a>
   -->
   <br />
