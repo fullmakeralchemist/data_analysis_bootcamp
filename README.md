@@ -85,42 +85,38 @@
 
 El objetivo de este proyecto es realizar un análisis en profundidad de las necesidades del paciente en los hospitales de EE. UU., centrándose en identificar áreas clave donde los pacientes pueden sentirse desatendidos o frustrados. A través de este análisis, mi objetivo es empoderar a los pacientes dándoles una voz en el proceso de atención médica y ayudándolos a resaltar problemas sistémicos que podrían afectar su experiencia de atención.
 
-I didn't have enough time to add this documentation to the repo but here is the pdf version:
-
-Run the following tutorial [following tutorial](https://github.com/fullmakeralchemist/dataengweather/blob/master/pdf/DE%20Documentacion%20flujo%20csv%20AWS.pdf) to start working with a workflow of data in AWS.
-
-The code of the Lambda function can be found in [lambda.py](https://github.com/fullmakeralchemist/dataengweather/blob/master/lambda.py)
+Ve a la siguiente liga[following tutorial](https://www.kaggle.com/datasets/kaggleprollc/healthcare-patient-satisfaction-data-collection) para descargar el dataset.
 
 ## Challenges I ran into and What I learned
 
-One of the main challenges was finding how to send data from Arduino directly to AWS. As such, there is no documentation about it. Currently, the only option available is using one intermediary as it is Raspberry Pi to use it as a channel of obtaining the data automatically but it has a cost getting one and setting it.
+Uno de los principales desafíos fue encontrar un conjunto de datos sobre la satisfacción de los pacientes que esté disponible y sea de uso libre. Como mencione en el documento estos son datos sensibles por lo que obtener esta informacion o con mas detalle es muy dificil.
 
-The second main challenge was how many data variables can we read on an Arduino card since only few cards have the capacity to read specific sensors, these cards mostly do not have the necessary sensors to read the necessary pressure, humidity and temperature data. In addition, they only have Bluetooth communication, which makes communication with Streamlit difficult.
+El segundo desafia fue saber como empezar a hacer mi storytelling, ya que con la informacion que pude obtener no me daba todo el detalle sobre la historia del paciente, asi como saber detalles como las edades de los pacientes que pueden traer mas evidencia sobre las necesidades, y las posibles mejoras o fallas en las instituciones.
 
-Finally, this is the first time I've used AWS API with Streamlit. In the end, I learned that whenever you may think that you found no way out, motivation can help you find alternative solutions with these resources.
-
+Y finalmente el ultimo fue utilizar la informacion para hacer un pequeño dashboard de muestra con la informacion disponible.
 
 ## Observations about the project
 
-Streamlit Share needs a special env variable for the credentials in AWS here is the link for documentation. Due to lack of time and knowledge of cloud tools that allow Streamlit Share to communicate with Arduino remotely using the communication protocol used, this project can only be used at the moment to communicate locally and send the data to S3 using Raspberry Pi also is really difficult and not recomendable using Windows to manage local brokers.
+Debido a la falta de tiempo y conocimiento sobre como obtener informacion no pude avanzar mas en trababajar otros paises o informacion sobre mi pais que pudiera complementar para hacer una comparativa.
 
-In addition, the Streamlit app has 1 path to save files for just one user. It is necessary to implement the route for different users to avoid putting data from different users to just one folder.
+En adicion, la aplicacion de Streamlit no contiene todos los archivos ya que sobrepasa el 1 GB de almacenamiento de la app, esto me gustaria solucionarlo tal vez hosteando la app en un servicio como AWS o buscar alguna otra manera de leer los datos sin gastar.
 
-The data set is just for temperature, pressure and humidity is necessary to do implement more sensors to get more data also the time is set to register data each 20 seconds is necessary to do more research about the timing of records this can increase the size of the data, also for the moment i don’t have the calculation about how many data can be saved in the bucket and the cost so having data from multiple users and historical data.
+Por ultimo la segunda fase no puede ser llevada acabo sin apoyo del Gobierno, una ONG o una institucion medica oficial. Ademas de tener los permisos y acuerdos necesarios para el proyecto.
 
 ## Accomplishments that I'm proud of
 
-- Creation of a custom script to collect information and the option to include more variables.
-- Building an ERD model with a first structure analyzing possible options for data.
-- Apply knowledge of communication protocols with Data Engineering real time data collection.
-- Create an app using Streamlit.
-- Start creating a tool that will help others.
+- Desarrollo de un primero codigo de EDA para los datos de Kaggle
+- Hacer un storytelling con la escada informacion encontrada. 
+- Aplicar los conocimiento de comunicacion de la evidencia encontrada atraves de los datos.
+- Utilizar mis conocimientos prevvios de una ONG de Cancer sobre extraccion de puntos clave en datos de salud de pacientes.
+- Crear una app ejemplo usando Streamlit.
+- Crear una herramienta y proyecto base para ayudar a otros.
 
-## What's next for Weather Data Collection
+## What's next for Needs Assessment Patients Data Analysis
 
-- Find more options to send data from Arduino to AWS
-- Obtain more information and, if possible, include more variables and sensors.
-- Add the option to do dashboarding with the collected data to the app.
+- Encontrar un proyecto que se acople a este para participar y seguirlo desarrollando
+- Mejorar la app de dashboarding en Streamlit
+- Usar la informacion para una segunda fase del proyecto
 
 ## License
 
